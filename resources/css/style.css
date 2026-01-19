@@ -1,0 +1,367 @@
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
+:root {
+  --brown-dark: #2b1e14;
+  --brown-main: #3a2a20;
+  --brown-accent: #c7a17a;
+  --brown-light: #efe6dc;
+  --off-white: #f2e8df;
+  --page-bg: #f6f2ee;
+
+  --max-width: 1100px;
+  --page-padding: 2rem;
+}
+
+/* =====================================================
+   BASE RESET
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--page-bg);
+  color: var(--brown-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
+
+header {
+  background-color: var(--brown-main);
+  padding: 1rem var(--page-padding);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--brown-accent);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after,
+nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+nav a[aria-current="page"] {
+  color: var(--brown-accent);
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--brown-accent);
+  outline-offset: 4px;
+}
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+main {
+  width: 100%;
+  flex: 1;
+}
+
+section {
+  padding: 4rem var(--page-padding);
+}
+
+/* Content container (slightly right-biased) */
+section > * {
+  max-width: var(--max-width);
+  margin-left: 4rem;
+}
+
+section h1,
+section h2 {
+  margin-bottom: 1rem;
+}
+
+section p {
+  max-width: 65ch;
+  line-height: 1.7;
+  color: #3b2a20;
+}
+
+/* =====================================================
+   HERO (HOME)
+===================================================== */
+
+.hero {
+  background-color: var(--page-bg);
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem;
+}
+
+/* =====================================================
+   BUTTONS & LINKS
+===================================================== */
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--brown-main);
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--brown-dark);
+  transform: translateY(-1px);
+}
+
+.text-link {
+  color: var(--brown-main);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid var(--brown-accent);
+}
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
+
+.featured-products {
+  background-color: #ffffff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: var(--page-bg);
+  padding: 1.5rem;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* =====================================================
+   MISSION / ABOUT
+===================================================== */
+
+.mission {
+  background-color: var(--brown-light);
+}
+
+.about {
+  background-color: #ffffff;
+}
+
+.about-content {
+  max-width: 70ch;
+}
+
+.about-content p + p {
+  margin-top: 1.5rem;
+}
+
+/* =====================================================
+   PRODUCTS PAGE
+===================================================== */
+
+.products {
+  background-color: var(--page-bg);
+}
+
+.products-intro {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+/* =====================================================
+   CONTACT (EMAIL ONLY)
+===================================================== */
+
+.contact-simple {
+  background-color: #ffffff;
+}
+
+.contact-intro {
+  max-width: 60ch;
+  margin-bottom: 2.5rem;
+}
+
+.contact-email a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--brown-main);
+  text-decoration: none;
+  border-bottom: 3px solid var(--brown-accent);
+}
+
+.contact-email a:hover {
+  color: #000;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  background-color: var(--brown-main);
+  color: var(--off-white);
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem var(--page-padding);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo img {
+  height: 36px;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav a {
+  color: var(--off-white);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+footer nav a:hover {
+  color: var(--brown-accent);
+}
+
+.footer-bottom {
+  padding: 1rem var(--page-padding);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #d8c7b8;
+}
+.hero-logo {
+  text-align: center;
+}
+
+.hero-logo-image {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-logo img {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 640px) {
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  section > * {
+    margin-left: 0;
+  }
+
+  nav ul,
+  footer nav ul {
+    gap: 1.25rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
