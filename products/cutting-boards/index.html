@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/resources/css/style.css">
+        <script src="/resources/js/gallery.js" defer></script>
+        <title>Peartree Woodworking</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <a href="/" class="logo">
+                    <img src="/resources/images/logo_transparent.png" alt="Peartree">
+                </a>
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/products" aria-current="page">Products</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="product-detail">
+                <div class="product-layout">
+                    <div class="product-gallery" data-gallery>
+                        <div class="gallery-frame">
+                            <img
+                            src="/resources/images/webp/cutting7.webp"
+                            alt="Product Name"
+                            data-gallery-image
+                            />
+
+                            <button class="gallery-arrow prev" data-gallery-prev aria-label="Previous image">
+                            ‹
+                            </button>
+                            <button class="gallery-arrow next" data-gallery-next aria-label="Next image">
+                            ›
+                            </button>
+                        </div>
+
+                        <!-- IMAGE SOURCES (hidden, JS reads these) -->
+                        <div class="gallery-images" hidden>
+                            <img src="/resources/images/webp/cutting5.webp" alt="">
+                            <img src="/resources/images/webp/cutting2.webp" alt="">
+                            <img src="/resources/images/webp/cutting3.webp" alt="">
+                            <img src="/resources/images/webp/cutting4.webp" alt="">
+                            <img src="/resources/images/webp/cutting1.webp" alt="">
+                            <img src="/resources/images/webp/cutting8.webp" alt="">
+                        </div>
+                    </div>
+
+                    <!-- PRODUCT INFO (RIGHT) -->
+                    <div class="product-info">
+                        <h1 class="product-title">Custom Cutting Boards</h1>
+
+                        <p class="product-price">
+                        <!-- OPTIONAL: REMOVE IF CUSTOM QUOTE ONLY -->
+                        Starting at $XXX
+                        </p>
+
+                        <div class="product-description">
+                        <p>
+                            <!-- PRODUCT DESCRIPTION -->
+                            This handcrafted piece is made from premium hardwoods and finished
+                            by hand to highlight the natural grain and character of the wood.
+                        </p>
+
+                        <p>
+                            <!-- OPTIONAL DETAILS -->
+                            Built using traditional joinery techniques and designed for
+                            everyday use.
+                        </p>
+                        </div>
+
+                        <a href="/contact" class="btn-primary product-cta">
+                        Contact for Pricing / Custom Orders
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <a href="/" class="footer-logo">
+                    <img src="/resources/images/logo_transparent.png">
+                </a>
+                <nav aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>©Peartree Woodworking. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
